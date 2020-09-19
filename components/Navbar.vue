@@ -1,27 +1,51 @@
 <template>
   <div class="w-full">
-    <a-menu mode="horizontal">
-      <a-menu-item key="landing">
-        <nuxt-link to="/">Logo</nuxt-link>
+    <a-menu mode="horizontal" theme="dark">
+      <a-menu-item key="landing" class="text-2xl">
+        <nuxt-link
+          tag="img"
+          :src="require('@/assets/images/cram.png')"
+          to="/"
+        />
       </a-menu-item>
-      <a-menu-item v-if="permission === 'user'" key="credit-overview">
+      <a-menu-item
+        v-if="permission === 'user'"
+        key="credit-overview"
+        class="text-2xl"
+      >
         <nuxt-link to="/overview">Credit Overview</nuxt-link>
       </a-menu-item>
-      <a-menu-item v-if="permission === 'user'" key="credit-request">
+      <a-menu-item
+        v-if="permission === 'user'"
+        key="credit-request"
+        class="text-2xl"
+      >
         <nuxt-link to="/request">Credit Request</nuxt-link>
       </a-menu-item>
-      <a-menu-item v-if="permission === 'admin'" key="credit-approval">
+      <a-menu-item
+        v-if="permission === 'admin'"
+        key="credit-approval"
+        class="text-2xl"
+      >
         <nuxt-link to="/approval">Credit Approval</nuxt-link>
       </a-menu-item>
-      <a-menu-item v-if="permission !== null" key="signout">
+      <a-menu-item v-if="permission !== null" key="signout" class="text-2xl">
         <nuxt-link to="/">Sign Out</nuxt-link>
       </a-menu-item>
-      <a-menu-item v-if="permission === null" key="signout">
-        <nuxt-link to="/login">Sign In</nuxt-link>
-      </a-menu-item>
-      <a-menu-item v-if="permission === null" key="signout">
-        <nuxt-link to="/signuo">Sign Up</nuxt-link>
-      </a-menu-item>
+      <nuxt-link
+        v-if="permission === null"
+        class="float-right mr-4"
+        to="/signup"
+      >
+        <a-button type="primary" shape="round">Sign Up</a-button>
+      </nuxt-link>
+      <nuxt-link
+        v-if="permission === null"
+        class="float-right mr-4 text-white"
+        to="/login"
+      >
+        Sign In
+      </nuxt-link>
     </a-menu>
   </div>
 </template>

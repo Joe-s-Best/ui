@@ -1,5 +1,9 @@
 <template>
   <div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
     <Navbar />
     <Nuxt />
   </div>
@@ -15,6 +19,28 @@ export default {
 </script>
 
 <style>
+.ant-menu {
+  background: #292929;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16px;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background: #292929;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+div {
+  color: #fff;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+  background-color: #1e2749;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
