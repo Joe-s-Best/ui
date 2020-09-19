@@ -29,9 +29,13 @@
       >
         <nuxt-link to="/approval">Credit Approval</nuxt-link>
       </a-menu-item>
-      <a-menu-item v-if="permission !== null" key="signout" class="text-2xl">
-        <nuxt-link to="/">Sign Out</nuxt-link>
-      </a-menu-item>
+      <nuxt-link
+        v-if="permission !== null"
+        class="float-right text-white text-2xl mr-4"
+        to="/"
+      >
+        Sign Out
+      </nuxt-link>
       <nuxt-link
         v-if="permission === null"
         class="float-right mr-4"
