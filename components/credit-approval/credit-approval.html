@@ -1,54 +1,62 @@
+<div class="container">
+    <div class="flex mb-4">
+        <!-- Credit to review -->
+        <div class="w-3/4 credits-to-review">
+            <!-- Credit to review Titlee -->
+            <div class="LexendDeca">
+                Credits to Review
+            </div>
+            <!-- Bottom part -->
+            <div class="credits-to-review-grid">
+                <div class="flex mb-5 ">
+                    <!-- First row Title-->
+                    <div class="w-2/5 LibreFranklin">
+                        Course 
+                    </div>
+                    <div class="w-1/5 LibreFranklin">
+                        Credits Fulfilled 
+                    </div>
+                </div>
+                                <!-- Second row courses-->
+                <div v-for="course in myCourses">
 
-<div class="w-full">
-    <a-menu mode="horizontal" theme="dark">
-    <a-menu-item key="landing" class="text-2xl">
-        <nuxt-link
-        tag="img"
-        :src="require('@/assets/images/cram.png')"
-        to="/"
-        />
-    </a-menu-item>
-    <a-menu-item
-        v-if="permission === 'user'"
-        key="credit-overview"
-        class="text-2xl"
-    >
-        <nuxt-link to="/overview">Credit Overview</nuxt-link>
-    </a-menu-item>
-    <a-menu-item
-        v-if="permission === 'user'"
-        key="credit-request"
-        class="text-2xl"
-    >
-        <nuxt-link to="/request">Credit Request</nuxt-link>
-    </a-menu-item>
-    <a-menu-item
-        v-if="permission === 'admin'"
-        key="credit-approval"
-        class="text-2xl"
-    >
-        <nuxt-link to="/approval">Credit Approval</nuxt-link>
-    </a-menu-item>
-    <nuxt-link
-        v-if="permission !== null"
-        class="float-right text-white text-2xl mr-4"
-        to="/"
-    >
-        Sign Out
-    </nuxt-link>
-    <nuxt-link
-        v-if="permission === null"
-        class="float-right mr-4"
-        to="/signup"
-    >
-        <a-button type="primary" shape="round">Sign Up</a-button>
-    </nuxt-link>
-    <nuxt-link
-        v-if="permission === null"
-        class="float-right mr-4 text-white"
-        to="/login"
-    >
-        Sign In
-    </nuxt-link>
-    </a-menu>
+                    <div class="flex mb-5">
+                        <div class="w-2/5 LexendDeca">
+                            {{course.name}}
+                        </div>
+                        <div class="w-1/5 LexendDeca">
+                            {{course.credit}} 
+                        </div>
+                        <div class="w-1/5 LexendDeca">
+                            {{course.credit}}  
+                        </div>
+                        <div class="w-1/5 LexendDeca">
+                            {{course.credit}} 
+                        </div>
+                    </div>
+                </div>
+                    <!-- Last section -->
+                <div class="LexendDeca credits-to-review-center-bottom" > 
+                    Total Completed Credits:
+                </div>
+                <div class="LexendDeca">
+                    Needed Credits: 120
+                </div>
+                <div class="LexendDeca">
+                    Expected Graduation Semester: Spring 2022
+                </div>
+            </div>
+        </div>
+        <!-- SEARCH -->
+        <div class="w-1/4 search-section">
+            <div class ="btn">
+                <a-input placeholder="Search student record ..." />
+                   
+            </div>
+            <div>
+                Spencer young
+            </div>
+        </div>
+    </div>
+
 </div>

@@ -1,0 +1,47 @@
+.btn {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.credits-to-review{
+    padding: 5px;
+}
+
+.credits-to-review-grid{
+    background-color: #273469;
+    padding: 10px;   
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.credits-to-review-center{
+    text-align: center !important;
+}
+
+.credits-to-review-center-bottom{
+    padding-top: 50px;
+}
+
+
+.search-section{
+    background-color: #234A97;
+    padding: 10px;
+}
+
+.LexendDeca{
+    font-family: "Lexend Deca";
+}
+
+.LibreFranklin{
+    font-family: "Libre Franklin";
+}
+
+@font-face {
+    font-family: "Lexend Deca";
+    src: url("../../assets/fonts/LexendDeca-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Libre Franklin";
+    src: url("../../assets/fonts/LibreFranklin-Black.ttf");
+}
