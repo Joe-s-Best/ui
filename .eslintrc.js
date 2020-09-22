@@ -17,8 +17,4 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {},
-"eslint.autoFixOnSave": true,
-"eslint.options": {
-  "eol-last": 0,
-},
 }
