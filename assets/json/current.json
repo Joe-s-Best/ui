@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Chemistry", "reqCredit": "3", "progCredit": 0, "appCredit": 6
+  },
+  {
+    "name": "EE Upper", "reqCredit": "3", "progCredit": 3, "appCredit": 0
+  },
+  {
+    "name": "EE Lower", "reqCredit": "3", "progCredit": 6, "appCredit": 3
+  },
+  {
+    "name": "Math", "reqCredit": "3", "progCredit": 0, "appCredit": 12
+  }
+]
