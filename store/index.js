@@ -1,3 +1,3 @@
 export const state = () => ({
-  permission: null,
+  permission: null, // user, admin
 })
