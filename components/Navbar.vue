@@ -13,7 +13,7 @@
         key="credit-overview"
         class="text-2xl"
       >
-        <nuxt-link to="/overview">Credit Overview</nuxt-link>
+        <nuxt-link to="/credit-overview">Credit Overview</nuxt-link>
       </a-menu-item>
       <a-menu-item
         v-if="permission === 'user'"
