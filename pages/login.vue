@@ -1,6 +1,5 @@
-<template>
-  <div>Login</div>
-</template>
+<style src="../components/login/login.css"></style>
+<template src="../components/login/login.html"></template>
 
 <script>
 export default {
@@ -9,3 +8,5 @@ export default {
 </script>
 
 <style></style>
+
+
