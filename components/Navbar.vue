@@ -33,6 +33,7 @@
         v-if="permission !== null"
         class="float-right text-white text-2xl mr-4"
         to="/"
+        @change="logout()"
       >
         Sign Out
       </nuxt-link>
@@ -50,6 +51,7 @@
       >
         Sign In
       </nuxt-link>
+      { console.log(this.$store.state) }
     </a-menu>
   </div>
 </template>
@@ -60,6 +62,11 @@ export default {
   computed: {
     permission() {
       return this.$store.state.permission
+    },
+  },
+  methods: {
+    logout() {
+      this.$store.commit('logout', null)
     },
   },
 }

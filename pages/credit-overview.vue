@@ -79,7 +79,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import SemesterCard from '../components/SemesterCard.vue'
 import current from '../assets/json/current.json'

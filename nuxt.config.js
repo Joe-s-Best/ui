@@ -40,5 +40,4 @@ export default {
 
   mode: 'universal',
   devtools: 'true',
-
 }
