@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-for="sem in semesterInfo">
-      <a-col v-bind:key="sem.id" :span="12">
+      <a-col :key="sem.id" :span="12">
         <a-card class="course-card" :bordered="false">
           <div class="card-header">
             {{ sem.semester }}
@@ -13,7 +13,7 @@
           </a-row>
           <a-divider class="close-vertical" />
           <template v-for="course in sem.courses">
-            <a-row v-bind:key="course.key">
+            <a-row :key="course.key">
               <a-col :span="12">{{ course.name }}</a-col>
               <a-col style="text-align: center" :span="12">
                 {{ course.credits }}

@@ -11,7 +11,7 @@
             <a-col :span="6">Credits Approved</a-col>
           </a-row>
           <template v-for="current in currentProg">
-            <a-row v-bind:key="current.name">
+            <a-row :key="current.name">
               <a-col style="text-align: left" :span="6">
                 {{ current.name }}
               </a-col>
@@ -37,7 +37,7 @@
       <a-col :span="12">
         <h1>Recommended Path</h1>
         <a-row style="margin-right: 20px" :gutter="[24, 24]">
-          <SemesterCard v-bind:semester-info="testSemesters" />
+          <SemesterCard :semester-info="testSemesters" />
         </a-row>
       </a-col>
     </a-row>
