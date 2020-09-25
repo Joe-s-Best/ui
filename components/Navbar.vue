@@ -51,7 +51,6 @@
       >
         Sign In
       </nuxt-link>
-      { console.log(this.$store.state) }
     </a-menu>
   </div>
 </template>
