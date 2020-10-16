@@ -89,4 +89,17 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+.rounded-info-box {
+  font-family: 'Lexend Deca, sans-serif';
+  color: #fafaff;
+  background-color: #273469;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 25px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  min-height: 20vw;
+  font-size: 1.15vw;
+}
 </style>

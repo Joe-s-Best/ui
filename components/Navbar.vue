@@ -13,7 +13,7 @@
         key="credit-overview"
         class="text-2xl"
       >
-        <nuxt-link to="/overview">Credit Overview</nuxt-link>
+        <nuxt-link to="/credit-overview">Credit Overview</nuxt-link>
       </a-menu-item>
       <a-menu-item
         v-if="permission === 'user'"
@@ -33,6 +33,7 @@
         v-if="permission !== null"
         class="float-right text-white text-2xl mr-4"
         to="/"
+        @change="logout()"
       >
         Sign Out
       </nuxt-link>
@@ -60,6 +61,11 @@ export default {
   computed: {
     permission() {
       return this.$store.state.permission
+    },
+  },
+  methods: {
+    logout() {
+      this.$store.commit('logout', null)
     },
   },
 }
