@@ -6,7 +6,7 @@
 export default {}
 </script>
 
-<style scoped>
+<style>
 .container {
   margin-right: 0px;
   width: 1280px;
@@ -19,5 +19,14 @@ export default {}
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-family: 'Lexend Deca', sans-serif;
+  color: #efd9ff;
+  font-size: 2.2vw;
+  letter-spacing: -3px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 </style>

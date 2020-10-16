@@ -7,6 +7,11 @@
       <h1 class="text-gray-200 font-bold text-4xl box-header">
         Private Key Sign In
       </h1>
+      <div class="text-xs text-gray-500">
+        Enter your private key you saved when you registered.
+      </div>
+      <br />
+      <br />
       <div class="mb-4">
         <input
           id="username"

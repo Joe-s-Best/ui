@@ -88,14 +88,14 @@
             <td>3</td>
             <td>3</td>
             <td>Fall 2020</td>
-            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW (Frendy Lio)</td>
           </tr>
           <tr>
             <td>Chem 162</td>
             <td>3</td>
             <td>3</td>
             <td>Fall 2021</td>
-            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW (Frendy Lio)</td>
           </tr>
         </table>
         <br />
@@ -113,14 +113,14 @@
             <td>3</td>
             <td>3</td>
             <td>Fall 2020</td>
-            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW (Frendy Lio)</td>
           </tr>
           <tr>
             <td>Math 242</td>
             <td>3</td>
             <td>3</td>
             <td>Spring 2021</td>
-            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW (Frendy Lio)</td>
           </tr>
         </table>
       </div>
@@ -200,17 +200,6 @@ export default {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1.33vw;
   letter-spacing: -1.75px;
-}
-
-h1 {
-  font-family: 'Lexend Deca', sans-serif;
-  color: #efd9ff;
-  font-size: 2.2vw;
-  margin-left: 10px;
-  margin-top: 20px;
-  letter-spacing: -3px;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
 }
 
 .close-vertical {

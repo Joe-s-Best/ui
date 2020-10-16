@@ -7,6 +7,11 @@
       <h1 class="text-gray-200 font-bold text-4xl box-header">
         Student Registration
       </h1>
+      <div class="text-xs text-gray-500">
+        Make sure to save this key in a safe place. This is your password.
+      </div>
+      <br />
+      <br />
       <div class="flex items-center justify-between">
         <button
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -28,9 +33,6 @@
         />
         <br />
         <br />
-        <div class="text-xs text-gray-500">
-          Make sure to save this key in a safe place. This is your password.
-        </div>
       </div>
     </form>
   </div>
