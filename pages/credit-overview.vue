@@ -1,93 +1,137 @@
 <template>
   <div>
-    <a-row>
-      <a-col :span="12">
+    <div class="flex p-4">
+      <div class="w-1/2">
         <h1>Current Progress</h1>
-        <div class="info-box">
-          <a-row class="box-header">
-            <a-col style="text-align: left" :span="6">Requirement</a-col>
-            <a-col :span="6">Credits Required</a-col>
-            <a-col :span="6">Credits In-Progress</a-col>
-            <a-col :span="6">Credits Approved</a-col>
-          </a-row>
-          <template v-for="current in currentProg">
-            <a-row :key="current.name">
-              <a-col style="text-align: left" :span="6">
-                {{ current.name }}
-              </a-col>
-              <a-col :span="6">{{ current.reqCredit }}</a-col>
-              <a-col :span="6">{{ current.progCredit }}</a-col>
-              <a-col :span="6">{{ current.appCredit }}</a-col>
-            </a-row>
-          </template>
-          <a-row
-            type="flex"
-            justify="start"
-            align="bottom"
-            style="text-align: left"
-          >
-            <a-col :span="24" style="padding-top: 10vw">
-              Total Completed Credits: 80<br />
-              Total Needed Credits: 120<br />
-              Expected Grad Semester: Spring 2022<br />
-            </a-col>
-          </a-row>
+        <div
+          class="shadow-md rounded p-8 text"
+          style="background-color: #273469"
+        >
+          <table class="w-full text-lg">
+            <tr class="text-gray-500">
+              <th>Requirement</th>
+              <th>Credits Required</th>
+              <th>Credits In Progress</th>
+              <th>Credits Approved</th>
+            </tr>
+            <tr v-for="current in currentProg" :key="current.name">
+              <td>{{ current.name }}</td>
+              <td>{{ current.reqCredit }}</td>
+              <td>{{ current.progCredit }}</td>
+              <td>{{ current.appCredit }}</td>
+            </tr>
+          </table>
+          <br />
+          <br />
+          <table>
+            <tr>
+              <td class="text-gray-500 font-bold pr-3">
+                Total Finished Credits
+              </td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td class="text-gray-500 font-bold pr-3">Total Needed Credits</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td class="text-gray-500 font-bold pr-3">Expected Graduation</td>
+              <td>Spring 2022</td>
+            </tr>
+          </table>
         </div>
-      </a-col>
-      <a-col :span="12">
+      </div>
+      <div class="w-1/2 pl-2">
         <h1>Recommended Path</h1>
-        <a-row style="margin-right: 20px" :gutter="[24, 24]">
-          <SemesterCard :semester-info="testSemesters" />
-        </a-row>
-      </a-col>
-    </a-row>
-    <a-divider />
-    <h1 style="text-align: center">Finished Credit Breakdown</h1>
-    <div class="info-box" style="text-align: left">
-      <div class="box-header">Chemistry Requirement</div>
-      <a-divider class="close-vertical" />
-      <a-row>
-        <a-col :span="4">Chem 161</a-col>
-        <a-col :span="5">3 Credits Max</a-col>
-        <a-col :span="5">3 Credits Awarded</a-col>
-        <a-col :span="4">Fall 2020</a-col>
-        <a-col :span="6">Approved By: Frendy Lio</a-col>
-      </a-row>
-      <a-row>
-        <a-col :span="4">Chem 162</a-col>
-        <a-col :span="5">3 Credits Max</a-col>
-        <a-col :span="5">3 Credits Awarded</a-col>
-        <a-col :span="4">Spring 2021</a-col>
-        <a-col :span="6">Approved By: Frendy Lio</a-col>
-      </a-row>
-      <div style="margin-top: 40px" class="box-header">Math Requirement</div>
-      <a-divider class="close-vertical" />
-      <a-row>
-        <a-col :span="4">Math 241</a-col>
-        <a-col :span="5">3 Credits Max</a-col>
-        <a-col :span="5">3 Credits Awarded</a-col>
-        <a-col :span="4">Fall 2020</a-col>
-        <a-col :span="6">Approved By: Frendy Lio</a-col>
-      </a-row>
-      <a-row>
-        <a-col :span="4">Math 242</a-col>
-        <a-col :span="5">3 Credits Max</a-col>
-        <a-col :span="5">3 Credits Awarded</a-col>
-        <a-col :span="4">Spring 2021</a-col>
-        <a-col :span="6">Approved By: Frendy Lio</a-col>
-      </a-row>
+        <div class="flex flex-wrap">
+          <div
+            v-for="path in testSemesters"
+            :key="path.semester"
+            class="w-1/4 shadow-md rounded p-4 text m-1"
+            style="background-color: #273469"
+          >
+            <div class="text-lg">
+              {{ path.semester }}
+            </div>
+            <br />
+            <table class="w-full">
+              <tr class="text-gray-500">
+                <th>Course</th>
+                <th>Credits</th>
+              </tr>
+              <tr v-for="course in path.courses" :key="course.key">
+                <td>{{ course.name }}</td>
+                <td>{{ course.credits }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4">
+      <h1>Finished Credit Breakdown</h1>
+      <div
+        class="w-1/4 shadow-md rounded p-4 text m-1 w-full"
+        style="background-color: #273469"
+      >
+        <div class="text-xl">Chemistry Requirement</div>
+        <table class="w-full text-lg">
+          <tr class="text-gray-500">
+            <th>Class</th>
+            <th>Max Credits</th>
+            <th>Awarded Credits</th>
+            <th>Semester Completed</th>
+            <th>Approved By</th>
+          </tr>
+          <tr>
+            <td>Chem 161</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Fall 2020</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+          </tr>
+          <tr>
+            <td>Chem 162</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Fall 2021</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+          </tr>
+        </table>
+        <br />
+        <div class="text-xl">Math Requirement</div>
+        <table class="w-full text-lg">
+          <tr class="text-gray-500">
+            <th>Class</th>
+            <th>Max Credits</th>
+            <th>Awarded Credits</th>
+            <th>Semester Completed</th>
+            <th>Approved By</th>
+          </tr>
+          <tr>
+            <td>Math 241</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Fall 2020</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+          </tr>
+          <tr>
+            <td>Math 242</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Spring 2021</td>
+            <td>DEz3wejvFMRv8dmDRNrtbrokizbyYAz3tW</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import SemesterCard from '../components/SemesterCard.vue'
 import current from '../assets/json/current.json'
 
 export default {
   name: 'CreditOverview',
-  components: {
-    SemesterCard,
-  },
   data() {
     return {
       testSemesters: [
@@ -174,5 +218,9 @@ h1 {
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.text {
+  font-family: 'Libre Franklin', sans-serif;
 }
 </style>
