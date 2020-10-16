@@ -1,5 +1,5 @@
 export const state = () => ({
-  permission: null,
+  permission: null, // user, admin
 })
 
 export const mutations = {
