@@ -1,24 +1,33 @@
 <template>
-  <a-row>
-    <a-col :span="8" :offset="8">
-      <div style="margin-top: 40%" class="rounded-info-box">
-        <h1 class="box-header">Login</h1>
-        <a-form
-          :form="form"
-          :label-col="{ span: 6 }"
-          :wrapper-col="{ span: 12 }"
-          @submit="handleSubmit"
-        >
-          <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
-            <a-input placeholder="Private Key" />
-          </a-form-item>
-          <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
-            <a-button type="primary" html-type="submit">Login</a-button>
-          </a-form-item>
-        </a-form>
+  <div class="flex w-full justify-center" style="padding-top: 15%">
+    <form
+      class="h-full shadow-md rounded p-16 mb-4"
+      style="background-color: #273469"
+    >
+      <h1 class="text-gray-200 font-bold text-4xl box-header">
+        Private Key Sign In
+      </h1>
+      <div class="mb-4">
+        <input
+          id="username"
+          class="shadow appearance-none rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 text-white"
+          type="text"
+          placeholder="Private Key"
+          v-bind="pkey"
+        />
       </div>
-    </a-col>
-  </a-row>
+      <br />
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+          @click="handleSubmit"
+        >
+          Sign In
+        </button>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -28,18 +37,13 @@ export default {
   data() {
     return {
       formLayout: 'horizontal',
-      form: this.$form.createForm(this, { name: 'coordinated' }),
+      pkey: '',
     }
   },
 
   methods: {
     handleSubmit(e) {
       e.preventDefault()
-      this.form.validateFields((err, values) => {
-        if (!err) {
-          // console.log('lol')
-        }
-      })
     },
   },
 }
@@ -48,7 +52,7 @@ export default {
 <style scoped>
 .box-header {
   color: #fafaff;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.8vw;
   letter-spacing: -1.75px;
 }
