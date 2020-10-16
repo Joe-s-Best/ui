@@ -39,6 +39,7 @@ div {
 
 body {
   background-color: #1e2749;
+  height: 100%;
 }
 
 html {
